@@ -9,11 +9,13 @@ You must specify an environment variable = `TEAMS_WEBHOOK` to a reacheable webho
 
 To create a Microsoft Teams webhook, use the following [instructions](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook#:~:text=The%20webhook%20is%20available%20in%20the%20Teams%20channel):
 
+[![Webhook](./media/teams-incoming-webhook.png)](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook#:~:text=The%20webhook%20is%20available%20in%20the%20Teams%20channel)
+
 Alerts will be posted with the appropriate text messge to the Teams webhook url.
 
 Expected output on Teams:
 
-![overview](./media/restart.png) 
+![Teams](./media/restart.png) 
 
 # Using this service within a K8s cluster
 
