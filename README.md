@@ -124,7 +124,7 @@ Event type = Modified, occured on pod with name = sleeping
 # Getting started for developers 
 
 make sure kubeconfig exists in `~/.kube/config`, or `KUBECONFIG` env var is set to the kube config path
-make sure the microsoft teams webhook is specified as an environment variable = `DEPLOYMENTNAME` as well as the service name as `SERVICENAME`.
+make sure the microsoft teams webhook is specified as an environment variable = TEAMS_WEBHOOK.
 
 1.	Install dotnet
 2.	dotnet restore
