@@ -9,6 +9,10 @@ You must specify an environment variable = `TEAMS_WEBHOOK` to a reacheable webho
 
 Alerts will be posted with the appropriate text messge to the Teams webhook url.
 
+Expected output on Teams:
+
+![overview](./media/restart.png) 
+
 # Using this service within a K8s cluster
 
 all the instructions below assume you are in the top directory of the repo you cloned.
@@ -128,12 +132,6 @@ make sure the microsoft teams webhook is specified as an environment variable = 
 
 ## To clean up when you no longer need this functionality
 
-make sure you did docker login if you intend to push to your docker registry
-
-```shell
-make docker-build
-make docker-push # optional
-make deploy
 ```
 To cleanup after, you can use:
 
