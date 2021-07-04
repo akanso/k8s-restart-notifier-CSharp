@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: restart-notifier
+  namespace: default  # change to match the namespace of your choice, if empty, "default" is used
+spec:
+  containers:
+  - name: restart-notifier
+    image: restart-notifier:1.0
+    imagePullPolicy: IfNotPresent # available options: Always, IfNotPresent, Always
+    env:
+    - name: NAMESPACE
+      value: "default"  # change to match the namespace of your pods e.g. kube-system, if empty, "default" is used
+    #- name: TEAMS_WEBHOOK # uncommnent if not using a webhook in a secret, and comment out the env with valueFrom below
+    #  value: "somewebhook"  # uncommnent if not using a webhook in a secret and comment out the env with valueFrom below
+    - name: TEAMS_WEBHOOK
+      valueFrom:
+        secretKeyRef:
+          name: webhook-secret
+          key: WEBHOOK
+    resources:
+      limits:
+        cpu: "0.2"
+        memory: "200Mi"
+      requests:
+        cpu: "0.1"
+        memory: "100Mi"
