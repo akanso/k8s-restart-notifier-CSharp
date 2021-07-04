@@ -2,6 +2,7 @@
 
 This project listens to Kubernetes (K8s) pods, and when a pod's container is restarted, we notify a Microsoft Teams about this event. 
 
+![demo](./media/k8s-to-teams.gif)
 
 The namespace is of the pods to monitor is specified as an environment variable = `NAMESPACE`. 
 
@@ -136,7 +137,6 @@ make sure the microsoft teams webhook is specified as an environment variable = 
 
 ## To clean up when you no longer need this functionality
 
-```
 To cleanup after, you can use:
 
 ```shell
