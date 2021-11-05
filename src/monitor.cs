@@ -17,10 +17,6 @@ namespace watch
         /// </summary>
         private static readonly string webhookUrl = Environment.GetEnvironmentVariable("TEAMS_WEBHOOK");
 
-        public  static void Watch()
-        {
-            
-        }
         /// <summary>
         /// Verify wil check if any on pods' containers is terminated and call NotifyTeams
         /// </summary>
